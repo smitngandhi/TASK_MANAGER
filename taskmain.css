@@ -1,0 +1,60 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: url(sahin-sezer-dincer-YhoQj_EUi50-unsplash.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main
+{
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 30vw;
+    border-radius: 100%;
+    
+}
+.container
+{
+    
+   
+    height: 100px;
+    transform: translateX(10%);
+    
+   
+}
+a
+{
+    text-decoration: none;
+    color: rgb(232, 163, 34);
+}
+h2
+{
+    color: rgb(228, 192, 125);
+    letter-spacing: 2px;
+
+}
+button
+{
+    background-color: #454545;
+   border-radius: 30px;
+   padding: 3px;
+   margin-top: 20px;
+   color: rgb(232, 163, 34);
+   cursor: pointer;
+   width: 200px;
+}
+button:hover
+{
+   background-color: azure;
+   transition: all .5s;
+}

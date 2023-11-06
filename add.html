@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD</title>
+    <link rel = "icon" href =  "project.png"   type = "image/x-icon">
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    
+     <form id="form">
+        <h2>ADD YOUR TASK</h2>
+        <label id="selectuser">Select User:</label>
+        <select  id="opselect">
+            <option value="User1" selected>User1</option>
+            <option value="User2">User2</option>
+        </select>
+        <br>
+        <label id="tasknumber">Task Number:</label>
+        <select  id="numbers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <label for="title" id="titlename">Title:</label>
+        <input type="text" id="title" placeholder="Title">
+        <br>
+        <label for="description" id="descriptionname">Description:</label>
+        <textarea id="description" placeholder="Description" cols="20" rows="1"></textarea>
+        <br>
+        <label for="deadline" id="deadline">Deadline:</label>
+        <input type="date" id="date">
+        <br>
+        <label for="" id="status">Status:</label>
+        <select name="status" id="statusselect">
+            <option value="To-Do" selected>TO-DO</option>
+            <option value="In-Progress" >In-Progress</option>
+            <option value="Completed" >Completed</option>
+        </select>
+        <br>
+        <button onclick="getall()" id="button">Submit</button>
+     </form>
+</body>
+<script src="add.js"></script>
+</html>
