@@ -9,8 +9,8 @@
     let statuss = document.getElementById('statusselect').value;
         localStorage.setItem(`${user}title${tasknumber}`,title);
         localStorage.setItem(`${user}description${tasknumber}`,description);
-        localStorage.setItem(`${user}Deadline${tasknumber}`,date);
-        localStorage.setItem(`${user}Status${tasknumber}`,statuss);
+        localStorage.setItem(`${user}deadline${tasknumber}`,date);
+        localStorage.setItem(`${user}status${tasknumber}`,statuss);
     }
 
 

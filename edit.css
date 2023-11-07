@@ -1,8 +1,8 @@
 *
 {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 body
 {
@@ -20,11 +20,6 @@ body
     text-align: center;
     border-radius: 30px;
 }
-textarea
-{
-    word-wrap: break-word;
-
-}
 h2
 {
     color: antiquewhite;
@@ -39,51 +34,86 @@ h2
 {
     margin-bottom: 10px;
 }
-#tasknumber
+#task
 {
     color: antiquewhite;
 }
-#numbers
+#tasknumber
 {
     margin-bottom: 10px;
 }
-#titlename
+#viewbutton
 {
-    color: antiquewhite;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: #454545;
+    color: rgb(232, 163, 34);
+}
+#viewbutton:hover
+{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
 }
 #title
 {
+    color: antiquewhite;
+}
+#titletext
+{
     margin-bottom: 10px;
 }
-#descriptionname
+#description
 {
     color: antiquewhite;
-
+}
+#descriptiontext
+{
+    margin-bottom: 10px;
 }
 #deadline
 {
     color: antiquewhite;
 }
-#date
+#deadlinetext
 {
-    margin-top: 10px;
     margin-bottom: 10px;
 }
-#status
+#statuss
 {
-    color: antiquewhite;
+   color: antiquewhite;
 }
-#button
+#statusstext
 {
+    margin-bottom: 10px;
+}
+#edit
+{
+    cursor: pointer;
     margin-top: 20px;
     width: 100px;
     background-color: #454545;
     color: rgb(232, 163, 34);
+}
+#remove
+{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    background-color: #454545;
+    color: rgb(232, 163, 34);
+}
+p
+{
+    color: white;
 }
 a
 {
     background-color: #454545;
     text-decoration: none;
     color: rgb(232, 163, 34);
-    border: none;
 }

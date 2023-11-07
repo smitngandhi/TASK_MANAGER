@@ -5,8 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIT</title>
     <link rel = "icon" href =  "project.png"   type = "image/x-icon">
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body>
-    
+    <form id="form">
+    <h2>Edit Your Task</h2>
+    <label id="selectuser">Select User:</label>
+    <select  id="opselect">
+        <option id="user1" selected>User1</option>
+        <option id="user2" >User2</option>
+    </select>
+    <br>
+    <label id="task">Task:</label>
+    <select id="tasknumber">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <br>
+    <button  onmouseover="setall()" id="viewbutton">MouseOver To View</button>
+    <br>
+    <label id="title">Title:</label>
+<p id="titletext">Your Title will be shown here</p>
+    <br>
+    <label id="description">Description:</label>
+    <p id="descriptiontext">Your Description will be shown here</p>
+    <br>
+    <label id="deadline">Deadline:</label>
+    <p id="deadlinetext">Your Deadline will be shown here</p>
+    <br>
+    <label id="statuss">Status:</label>
+    <p id="statustext">Your Status will be shown here</p>
+    <br>
+    <button  onclick="edittask()" id="edit">Edit</button>
+    <button onclick="removetask()" id="remove">Remove</button>
+    <br>
+    <br>
+    <button><a href="add.html">ADD YOUR TASK</a></button>
+    <br>
+        <br>
+        <button><a href="taskmain.html">HOME</a></button>
+    </form>
 </body>
+<script src="edit.js"></script>
 </html>
