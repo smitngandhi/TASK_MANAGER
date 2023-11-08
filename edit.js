@@ -42,7 +42,7 @@ function edittask()
     let title = prompt("Re enter your title");
 
     let description = prompt("Re enter your description");
-    let date = prompt("Re enter your deadline","Year-Month-Day");
+    let date = prompt("Re enter your deadline","Format:Year-Month-Day");
     let status = prompt("Re enter your status");
     localStorage.setItem(`${user}title${task}`,title);
         localStorage.setItem(`${user}description${task}`,description);
@@ -55,13 +55,31 @@ function removetask()
 {
     let user = document.getElementById('opselect').value;
  let task = document.getElementById('tasknumber').value;
+ if(localStorage.getItem(`${user}title${task}`)=="Your Title will be shown here"||localStorage.getItem(`${user}title${task}`)=="null"||localStorage.getItem(`${user}title${task}`)==null)
+    {
+        alert("Add Your Task First");
+    }
  localStorage.setItem(`${user}title${task}`,"Your Title will be shown here");
  localStorage.setItem(`${user}description${task}`,"Your Description will be shown here");
  localStorage.setItem(`${user}deadline${task}`,"Your Deadline will be shown here");
  localStorage.setItem(`${user}status${task}`,"Your Status will be shown here");
  localStorage.setItem(`${user}created${task}`,"Your Date of creating the task will be shown here");
 }
+function change_status()
+{
+    let user = document.getElementById('opselect').value;
+ let task = document.getElementById('tasknumber').value;
+    if(localStorage.getItem(`${user}status${task}`)=="Your Status will be shown here"||localStorage.getItem(`${user}status${task}`)=="null"||localStorage.getItem(`${user}status${task}`)==null)
+    {
+        alert("Enter Task First");
 
+    }
+    else
+    {
+        let status = prompt("Re enter your status","In-Progress/TODO/Completed");
+    localStorage.setItem(`${user}status${task}`,status);
+    }
+}
 
 
 

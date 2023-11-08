@@ -115,6 +115,14 @@ h2
     background-color: #454545;
     color: rgb(232, 163, 34);
 }
+#Changestatus
+{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 150px;
+    background-color: #454545;
+    color: rgb(232, 163, 34);
+}
 p
 {
     color: white;
