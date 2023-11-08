@@ -75,6 +75,14 @@ h2
 {
     margin-bottom: 10px;
 }
+#created
+{
+    color: antiquewhite;
+}
+#createdtext
+{
+    margin-bottom: 10px;
+}
 #deadline
 {
     color: antiquewhite;
