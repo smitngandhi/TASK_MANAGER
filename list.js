@@ -7,7 +7,7 @@ let statusbox = document.querySelectorAll('#status');
 function show()
 {
     let user = document.getElementById('opselect').value;
-
+   console.log("HELLO");
     for(let i = 0;i<titlebox.length;i++)
     {
         if(localStorage.getItem(`${user}title${i+1}`)==null||localStorage.getItem(`${user}title${i+1}`)=="null"||localStorage.getItem(`${user}title${i+1}`)=="Your Title will be shown here")
@@ -32,34 +32,20 @@ function show()
 
 }
 
-function filter()
+function showdefault()
 {
-    let user = document.getElementById('opselect').value;
-    let z = 0;
-    for(let i = 0 ;i<titlebox.length;i++)
-    {
-        if(localStorage.getItem(`${user}status${i+1}`)=="Completed"||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED")
-        {
-            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
-            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
-            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
-            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
-            z++;
-        }
-    }
+
     for(let i = 0;i<titlebox.length;i++)
     {
-        if(localStorage.getItem(`${user}status${i+1}`)=="In-Progress")
-        {
-            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
-            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
-            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
-            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
-            z++;
+            titlebox[i].innerHTML = "-";
+            descriptionbox[i].innerHTML = "-";
+            createdbox[i].innerHTML = "-";
+            deadlinebox[i].innerHTML = "-";
+            statusbox[i].innerHTML = "-";
         }
-    }
+    let user = document.getElementById('opselect').value;
+    let z = 0;
+
     for(let i = 0;i<titlebox.length;i++)
     {
         
@@ -73,7 +59,122 @@ function filter()
             z++;
         }
         }
+        for(let i = 0;i<titlebox.length;i++)
+    {
+        if(localStorage.getItem(`${user}status${i+1}`)=="In-Progress")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+            
+        }
     }
+    for(let i = 0 ;i<titlebox.length;i++)
+    {
+        
+        if(localStorage.getItem(`${user}status${i+1}`)=="Completed"||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+    }
+
+    }
+    function filterprogress()
+{
+    let user = document.getElementById('opselect').value;
+    let z = 0;
+    for(let i = 0 ;i<titlebox.length;i++)
+    {
+        if(localStorage.getItem(`${user}status${i+1}`)=="In-Progress")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+    }
+    for(let i = 0;i<titlebox.length;i++)
+    {
+        if(localStorage.getItem(`${user}status${i+1}`)=="To-Do")
+       
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+    }
+    for(let i = 0;i<titlebox.length;i++)
+    {
+        
+        if(localStorage.getItem(`${user}status${i+1}`)==""||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+        }
+    }
+    function filterdefault()
+{
+    let user = document.getElementById('opselect').value;
+    let z = 0;
+    for(let i = 0 ;i<titlebox.length;i++)
+    {
+        if(localStorage.getItem(`${user}status${i+1}`)=="To-Do")
+        
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+    }
+    for(let i = 0;i<titlebox.length;i++)
+    {
+        
+        if(localStorage.getItem(`${user}status${i+1}`)=="In-Progress")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+    }
+    for(let i = 0;i<titlebox.length;i++)
+    {
+        
+        if(localStorage.getItem(`${user}status${i+1}`)==""||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED")
+        {
+            titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
+            descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
+            createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
+            deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            z++;
+        }
+        }
+    }
+
 
         
     
