@@ -12,8 +12,6 @@ function show()
     {
         if(localStorage.getItem(`${user}title${i+1}`)==null||localStorage.getItem(`${user}title${i+1}`)=="null"||localStorage.getItem(`${user}title${i+1}`)=="Your Title will be shown here")
         {
-            
-            
             titlebox[i].innerHTML = "-";
             descriptionbox[i].innerHTML = "-";
             createdbox[i].innerHTML = "-";
@@ -26,7 +24,7 @@ function show()
         descriptionbox[i].innerHTML = localStorage.getItem(`${user}description${i+1}`)
         createdbox[i].innerHTML = localStorage.getItem(`${user}created${i+1}`)
         deadlinebox[i].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-        statusbox[i].innerHTML = localStorage.getItem(`${user}status${i+1}`)
+        statusbox[i].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
         }
     }
 
@@ -49,25 +47,25 @@ function showdefault()
     for(let i = 0;i<titlebox.length;i++)
     {
         
-        if(localStorage.getItem(`${user}status${i+1}`)=="To-Do")
+        if(localStorage.getItem(`${user}status${i+1}`)=="to-do"||localStorage.getItem(`${user}status${i+1}`)=="todo")
         {
             titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
         }
         for(let i = 0;i<titlebox.length;i++)
     {
-        if(localStorage.getItem(`${user}status${i+1}`)=="In-Progress")
+        if(localStorage.getItem(`${user}status${i+1}`)=="in-progress"||localStorage.getItem(`${user}status${i+1}`)=="inprogress")
         {
             titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
             
         }
@@ -75,13 +73,13 @@ function showdefault()
     for(let i = 0 ;i<titlebox.length;i++)
     {
         
-        if(localStorage.getItem(`${user}status${i+1}`)=="Completed"||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED")
+        if(localStorage.getItem(`${user}status${i+1}`)=="Completed"||localStorage.getItem(`${user}status${i+1}`)=="COMPLETED"||localStorage.getItem(`${user}status${i+1}`)=="completed")
         {
             titlebox[z].innerHTML = localStorage.getItem(`${user}title${i+1}`)
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
     }
@@ -99,7 +97,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
     }
@@ -112,7 +110,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
     }
@@ -125,7 +123,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
         }
@@ -143,7 +141,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
     }
@@ -156,7 +154,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
     }
@@ -169,7 +167,7 @@ function showdefault()
             descriptionbox[z].innerHTML = localStorage.getItem(`${user}description${i+1}`)
             createdbox[z].innerHTML = localStorage.getItem(`${user}created${i+1}`)
             deadlinebox[z].innerHTML = localStorage.getItem(`${user}deadline${i+1}`)
-            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`);
+            statusbox[z].innerHTML = localStorage.getItem(`${user}status${i+1}`).toUpperCase();
             z++;
         }
         }

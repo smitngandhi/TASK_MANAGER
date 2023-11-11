@@ -44,6 +44,7 @@ function edittask()
     let description = prompt("Re enter your description");
     let date = prompt("Re enter your deadline","Format:Year-Month-Day");
     let status = prompt("Re enter your status");
+    status = status.toLowerCase();
     localStorage.setItem(`${user}title${task}`,title);
         localStorage.setItem(`${user}description${task}`,description);
         localStorage.setItem(`${user}deadline${task}`,date);
@@ -76,7 +77,8 @@ function change_status()
     }
     else
     {
-        let status = prompt("Re enter your status","In-Progress/TODO/Completed");
+        let status = prompt("Re enter your status","InProgress/TODO/Completed");
+        status = status.toLowerCase();
     localStorage.setItem(`${user}status${task}`,status);
     }
 }

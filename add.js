@@ -14,6 +14,7 @@
     let description = document.getElementById('description').value;
     let deadline = document.getElementById('date').value;
     let statuss = document.getElementById('statusselect').value;
+    statuss = statuss.toLowerCase();
     if(localStorage.getItem(`${user}title${tasknumber}`)=="Your Title will be shown here"||localStorage.getItem(`${user}title${tasknumber}`)==null)
     {
         localStorage.setItem(`${user}title${tasknumber}`,title);
