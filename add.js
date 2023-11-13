@@ -1,5 +1,5 @@
 
-    function getall()
+   function getall()
     {
         let date = new Date();
         let month  = date.getMonth() + 1;
@@ -14,6 +14,12 @@
     let description = document.getElementById('description').value;
     let deadline = document.getElementById('date').value;
     let statuss = document.getElementById('statusselect').value;
+    if(title==""||description==""||deadline=="")
+    {
+        alert("Please fill out all the fields first");
+        return ;
+    }
+    
     statuss = statuss.toLowerCase();
     if(localStorage.getItem(`${user}title${tasknumber}`)=="Your Title will be shown here"||localStorage.getItem(`${user}title${tasknumber}`)==null)
     {
